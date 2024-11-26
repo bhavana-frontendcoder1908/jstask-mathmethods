@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    function generateOTP(length) {
+    let otp = '';
+    for (let i = 0; i < length; i++) {
+        otp += Math.floor(Math.random() * 10); //(0-9)
+    }
+    return otp;
+}
+    const otpLength = 6;
+    const otp = generateOTP(otpLength);
+    console.log("Your OTP is:", otp);
+
+    </script>
+
+
+<script>
+    let a1=prompt("enter any number")
+
+    function MinOrMaxFirst(num) {
+    
+    let numStr = num.toString();
+    let min = numStr[0];
+    let max = numStr[0];
+
+    for (let i = 1; i < numStr.length; i++) {
+        if (numStr[i] < min) {
+            min = numStr[i];
+        }
+        if (numStr[i] > max) {
+            max = numStr[i];
+        }
+    }
+
+    if (numStr.indexOf(min) < numStr.indexOf(max)) {
+        return " It Has Min At First";
+    } else {
+        return "It Has Max At First";
+    }
+}
+
+console.log(a1); 
+console.log(MinOrMaxFirst(a1));
+     </script>
+</body>
+</html>
